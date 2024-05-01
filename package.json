@@ -1,0 +1,49 @@
+{
+    "name": "gaming-isle",
+    "version": "1.0.4",
+    "description": "Gaming Isle",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "dist": "electron-builder .",
+        "watch": "nodemon --exec electron ."
+    },
+    "build": {
+        "asar": false,
+        "target": "squirrel",
+        "win": {
+            "icon": "./assets/img/logo/square_256x256.jpeg",
+            "requestedExecutionLevel": "highestAvailable"
+        },
+        "publish": [
+            {
+                "provider": "generic",
+                "url": "https://stagingbucket1e034167.s3.amazonaws.com/labs/elec-updt/gisle/staging/"
+            }
+        ],
+        "nsis": {
+            "perMachine": true,
+            "deleteAppDataOnUninstall": true
+        }
+    },
+    "repository": "",
+    "keywords": [],
+    "author": "Gaming Isle",
+    "license": "",
+    "devDependencies": {
+        "electron": "^5.0.2",
+        "electron-builder": "^21.1.0",
+        "electron-rebuild": "^1.8.6"
+    },
+    "dependencies": {
+        "auto-launch": "^5.0.5",
+        "axios": "^0.19.0",
+        "electron-updater": "^4.1.2",
+        "is-online": "^8.2.0",
+        "jquery": "^3.4.1",
+        "os-name": "^3.1.0",
+        "regedit": "^3.0.3",
+        "tasklist": "^4.0.0",
+        "uuid": "^3.3.3"
+    }
+}

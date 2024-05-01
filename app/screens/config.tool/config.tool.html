@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gaming Isle</title>
+    <style>
+        *{font-family: sans-serif;}
+        /* margins */
+        .m-5 {margin: 5px;}
+        .m-10 {margin: 10px;}
+        .m-15 {margin: 15px;}
+        .m-20 {margin: 20px;}
+        .mt-5 {margin-top: 5px;}
+        .mt-10 {margin-top: 10px;}
+        .mt-15 {margin-top: 15px;}
+        .mt-20 {margin-top: 20px;}
+        /* kbd, code etc */
+        kbd {font-family: Menlo,Monaco,Consolas,"Courier New",monospace}
+        kbd {padding: 2px 4px; font-size: 90%; color: #fff; background-color: #333; border-radius: 3px; -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.25); box-shadow: inset 0 -1px 0 rgba(0,0,0,.25) }
+        kbd kbd {padding: 0; font-size: 100%; font-weight: 700; -webkit-box-shadow: none; box-shadow: none }
+        /* float/align */
+        .text-left {text-align: left;}
+        .text-right {text-align: right;}
+        /* page vise */
+        #errmsg{color:red;margin-left: -13px;padding-top: 10px;}
+    </style>
+</head>
+<body>
+    <div class="wrapper_box_l1 mt-20">
+        <fieldset>
+            <legend>Key Combination to Exit Kiosk Mode</legend>
+            <div class="wrapper_box_l2">
+                <div class="m-15">
+                    <kbd>Shift</kbd><small> + </small>
+                    <kbd>Ctrl</kbd><small> + </small>
+                    <kbd>Alt</kbd><small> + </small>
+                    <select id="last_key"></select>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <div class="wrapper_box_l1 mt-20">
+        <fieldset>
+            <legend>Password to Exit Kiosk Mode</legend>
+            <div class="wrapper_box_l2">
+                <div class="m-15">
+                    <input type="password" id="password" placeholder="Enter Password" maxlength="50">
+                    <input type="password" id="passwordc" placeholder="Confirm Password" maxlength="50">
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <div class="wrapper_box_l1">
+        <div class="m-15 text-right">
+            <button id="pwd_confirmation" style="margin-left:-13px;">Save Details</button>
+            <div id="errmsg"></div>
+        </div>
+    </div>
+    <script>require('./config.tool.js')</script>
+</body>
+</html>

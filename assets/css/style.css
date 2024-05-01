@@ -1,0 +1,344 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: 'Dancing Script';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/dancing-script-v11-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: 
+    local('Dancing Script Regular'), 
+    local('DancingScript-Regular'), 
+    url('../fonts/dancing-script-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ 
+    url('../fonts/dancing-script-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */ 
+    url('../fonts/dancing-script-v11-latin-regular.woff') format('woff'), /* Modern Browsers */ 
+    url('../fonts/dancing-script-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */ 
+    url('../fonts/dancing-script-v11-latin-regular.svg#DancingScript') format('svg');
+    /* Legacy iOS */
+}
+
+/*** Menu ***/
+body {
+    background: url("../img/bg/dashboard0.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Dancing Script', cursive;
+}
+
+#container {
+    width: 80%;
+    margin: 0 auto;
+    color: #000;
+}
+
+.login-container-wrapper {
+    width: 350px;
+    padding: 25px 20px;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: 130px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #8ec641
+}
+
+.main-heading {
+    font-weight: 700;
+    font-size: 26px;
+    padding: 10px 0px;
+    color: #fff;
+}
+
+.form-controls {
+    position: relative;
+}
+
+.form-controls i {
+    color: #fced0d;
+}
+
+.form-area {
+    width: 90%;
+    padding: 10px 10px;
+    border: none;
+    background: none !important;
+    border: 1px solid #fced0d;
+    line-height: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #fff;
+}
+
+::placeholder {
+    color: #b8b8b8;
+    opacity: 1;
+    /* Firefox */
+}
+
+.form-area1 {
+    width: 90%;
+    padding: 10px 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    background: none !important;
+    border-bottom: 1px solid #fced0d;
+    border-left: 1px solid #fced0d;
+    border-right: 1px solid #fced0d;
+    line-height: 20px;
+    position: relative;
+    color: #fff;
+}
+
+.clear {
+    clear: both;
+}
+
+.signin {
+    margin: 15px 0px;
+}
+
+.form-choice {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+    width: 16px;
+    height: 16px;
+}
+
+input[type=checkbox], input[type=radio] {
+    font-size: medium;
+    background: #fff;
+}
+
+.btn {
+    border: none;
+    position: absolute;
+    right: 17px;
+    top: 10px;
+    font-size: 14px;
+    background: none;
+    color: #333;
+}
+
+.forgot-id {
+    font-size: 15px;
+    color: #fdee0c;
+    margin: 25px 0px;
+    position: relative;
+}
+
+.forgot-id:before {
+    content: '';
+    height: 1px;
+    width: 160px;
+    background: #c7c7c7;
+    position: absolute;
+    bottom: -10px;
+}
+
+/*** Dashboard ***/
+#top-bar {
+    width: 100%;
+    height: 45px;
+    background: rgba(39,38,54,0.7);
+    position: fixed;
+    z-index: 99;
+}
+
+.side-bar {
+    width: 250px;
+    position: fixed;
+    top: 56px;
+    left: 5px;
+    height: calc(100vh - 70px);
+    border-radius: 10px;
+    background: rgba(39,38,54,0.7);
+}
+
+.side-bar .logo-area {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.side-bar .menu {
+    width: 100%;
+    padding: 0px 10px;
+    margin-top: 100px;
+}
+
+.side-bar .menu ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.side-bar .menu ul li {
+    display: block;
+    margin: 20px 0px;
+}
+
+.game {
+    background: #00509b;
+    line-height: 45px;
+    text-align: center;
+    border: 1px solid #004381;
+    width: 100%;
+    border-radius: 8px;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Dancing Script', cursive !important;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.game:hover, .active {
+    box-shadow: 0 0 18px rgba(134, 196, 255, 0.9);
+}
+
+.game:before {
+    content: '';
+    background: url("../img/icon/gamelist.png")no-repeat;
+    position: absolute;
+    left: 15px;
+    width: 16px;
+    height: 23px;
+    top: 12px;
+}
+
+.profile {
+    background: #a2247d;
+    line-height: 45px;
+    text-align: center;
+    border: 1px solid #9a006d;
+    width: 100%;
+    border-radius: 8px;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Dancing Script', cursive !important;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.profile:hover {
+    box-shadow: 0 0 18px rgba(255, 122, 216, 0.9);
+}
+
+.profile:before {
+    content: '';
+    background: url("../img/icon/profile.png")no-repeat;
+    position: absolute;
+    left: 15px;
+    width: 27px;
+    height: 28px;
+    top: 10px
+}
+
+.logout {
+    background: #674ed1;
+    line-height: 45px;
+    text-align: center;
+    border: 1px solid #4b2ccf;
+    width: 100%;
+    border-radius: 8px;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Dancing Script', cursive !important;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.logout:hover {
+    box-shadow: 0 0 18px rgba(176, 157, 255, 0.9);
+}
+
+.logout:before {
+    content: '';
+    background: url("../img/icon/logout.png")no-repeat;
+    position: absolute;
+    left: 15px;
+    width: 24px;
+    height: 28px;
+    top: 10px
+}
+
+.content-wrapper {
+    margin-left: 255px;
+    padding: 50px 10px;
+    margin-right: 0px;
+}
+
+.content-flow {
+    height: 685px;
+    overflow-y: scroll;
+    overflow-x: 0;
+}
+
+.content-flow::-webkit-scrollbar {
+    width: 4px;
+}
+
+.content-flow::-webkit-scrollbar-track {
+    background: #296a42;
+    border-radius: 10px;
+}
+
+.content-flow::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #a2ed56;
+}
+
+.content-wrapper .card {
+    position: relative;
+    background: #130002;
+    color: #eabeff;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 11px;
+    box-shadow: 1px -8px 3px rgba(0,0,0,0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.content-wrapper .list {
+    margin-top: -23px;
+    transition: 0.5s;
+}
+
+.content-wrapper .list:hover {
+    transform: translateY(23px);
+}
+
+.content-wrapper .list img {
+    border-radius: 10px;
+    box-shadow: 0px 4px 5px 4px rgba(0,0,0,0.8);
+}
